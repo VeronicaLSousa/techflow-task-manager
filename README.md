@@ -43,3 +43,79 @@ Durante o desenvolvimento do projeto, foi identificada a necessidade de melhorar
 Como proposta de evolução do sistema, definiu-se a inclusão futura de um campo de prioridade (Alta, Média, Baixa), permitindo maior foco em tarefas críticas.
 
 Essa mudança foi registrada no quadro Kanban e planejada para uma próxima iteração do projeto, demonstrando a flexibilidade das metodologias ágeis.
+
+## Quadro GitHub Projects (Kanban)
+
+O projeto utiliza Kanban com pelo menos 10 cards distribuídos nas colunas To Do, In Progress e Done.
+Exemplo de organização:
+
+- To Do
+Criar endpoint GET /tasks
+Criar endpoint POST /tasks
+Adicionar validação de dados no POST /tasks
+Implementar endpoint DELETE /tasks/<id>
+
+- In Progress
+Implementar endpoint PATCH /tasks/<id>
+Implementar endpoint PUT /tasks/<id>
+Criar testes unitários para PATCH /tasks/<id>
+Criar testes unitários para DELETE /tasks/<id>
+
+- Done
+Configurar ambiente Flask
+Criar estrutura inicial de pastas (/src e /tests)
+
+Cada card contém:
+Título (descrição da tarefa)
+Descrição
+
+## Commits Semânticos e Frequentes
+
+O projeto utiliza mensagens de commit claras e padronizadas (ex: feat:, fix:, test:, docs:).
+Exemplo de commits realizados:
+
+feat: criar endpoint GET /tasks
+feat: criar endpoint POST /tasks
+test: criar testes para GET e POST
+feat: implementar PATCH /tasks/<id>
+test: adicionar testes de PATCH
+feat: implementar DELETE /tasks/<id>
+test: criar testes de DELETE
+fix: corrigir importações em services.py
+feat: adicionar filtro de tarefas por status
+test: criar teste para filtro de status
+
+## Testes Automatizados
+
+Utiliza PyTest para testes de unidade e integração dos endpoints Flask.
+
+Testes cobrem:
+
+Criação de tarefas (POST)
+Listagem de tarefas (GET)
+Atualização de tarefas (PATCH e PUT)
+Exclusão de tarefas (DELETE)
+Filtro de tarefas por status (nova feature)
+Todos os testes são executados automaticamente via GitHub Actions a cada push ou pull request, garantindo a integridade do código.
+
+## Pipeline de Integração Contínua (CI)
+
+O projeto possui pipeline configurado no GitHub Actions, com workflow que:
+
+Instala dependências Python
+Executa todos os testes (pytest)
+Valida o comportamento da aplicação em cada push ou pull request
+
+## Mudança de Escopo
+
+Durante o desenvolvimento, foi implementada a feature de filtragem de tarefas por status:
+
+Novo card criado no Kanban: “Adicionar filtro de tarefas por status”
+
+- Implementação:
+Ajuste no endpoint GET /tasks para aceitar parâmetro status
+Atualização da função get_all_tasks em services.py
+Teste unitário criado para verificar o filtro
+- Commit correspondente:
+feat: adicionar filtro de tarefas por status no endpoint GET /tasks
+
