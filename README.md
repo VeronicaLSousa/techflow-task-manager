@@ -119,3 +119,5 @@ Teste unitário criado para verificar o filtro
 - Commit correspondente:
 feat: adicionar filtro de tarefas por status no endpoint GET /tasks
 
+<img width="567" height="276" alt="tabela kanban" src="https://github.com/user-attachments/assets/2b8d4219-a35f-4ade-9dbc-6a024c54de5e" />
+<img width="567" height="254" alt="workflows" src="https://github.com/user-attachments/assets/a874f737-4498-47b1-bd94-7134038eb425" />
